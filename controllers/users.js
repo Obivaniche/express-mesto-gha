@@ -22,7 +22,7 @@ module.exports.getUser = (req, res) => {
       res.status(NOT_FOUND_STATUS).send({ message: 'Пользователь не найден' });
     })
     .catch((err) => {
-      if (err.name === 'castError') {
+      if (err.name === 'CastError') {
         res.status(BAD_REQUEST_STATUS).send({ message: 'Некорректный запрос' });
         return;
       }
