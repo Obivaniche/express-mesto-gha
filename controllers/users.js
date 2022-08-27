@@ -26,7 +26,7 @@ module.exports.getUser = (req, res) => {
         res.status(BAD_REQUEST_STATUS).send({ message: 'Некорректный запрос' });
         return;
       }
-      res.status(SERVER_ERROR_STATUS).send({ message: err.name });
+      res.status(SERVER_ERROR_STATUS).send({ message: 'Ошибка сервера' });
     });
 };
 
