@@ -1,8 +1,8 @@
 const User = require('../models/user');
 
 const {
-  BAD_REQUEST_STATUS,
   NOT_FOUND_STATUS,
+  BAD_REQUEST_STATUS,
   SERVER_ERROR_STATUS,
 } = require('../utils/errors');
 
