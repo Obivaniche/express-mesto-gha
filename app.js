@@ -16,14 +16,14 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use((req, res) => {
-  res.status(404).send({ message: 'Страница не найдена' });
-});
-
 mongoose.connect('mongodb://localhost:27017/mestodb');
 
 app.use('/users', require('./routes/users'));
 app.use('/cards', require('./routes/cards'));
+
+app.use((req, res) => {
+  res.status(404).send({ message: 'Страница не найдена' });
+});
 
 app.listen(PORT, () => {
   console.log(`Слушаем порт ${PORT}`);
